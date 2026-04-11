@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ShoppingCartApp.Calculator.CalculatorController">
+   <HBox fx:id="langButtonBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <Label fx:id="lblPrice" text="Price" />
+         <TextField fx:id="textFieldPrice" />
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <Label fx:id="lblQuantity" text="Quantity" />
+         <TextField fx:id="textFieldQuantity" />
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addToTotal" text="Add to total" />
+         </children>
+      </VBox>
+   </HBox>
+   <StackPane prefHeight="150.0" prefWidth="200.0">
+      <children>
+         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <Button fx:id="btnCalc" mnemonicParsing="false" onAction="#calculateTotal" text="Calculate Total">
+                  <VBox.margin>
+                     <Insets bottom="30.0" />
+                  </VBox.margin>
+               </Button>
+               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                     <Label fx:id="lblResult" text="Label" />
+                     <Label fx:id="lblResultNum" text="Label" />
+                  </children>
+               </VBox>
+            </children>
+         </VBox>
+      </children>
+   </StackPane>
+</VBox>

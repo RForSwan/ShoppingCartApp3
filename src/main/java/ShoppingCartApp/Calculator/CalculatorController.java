@@ -1,7 +1,6 @@
 package ShoppingCartApp.Calculator;
 
 import ShoppingCartApp.Database.LocalizationService;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -62,18 +61,16 @@ public class CalculatorController {
         btnAdd.setText(localizedStrings.getOrDefault("addItemPrompt", "Calculate Average Speed"));
         btnCalc.setText(localizedStrings.getOrDefault("calcItemPrompt", "Calculate Total"));
 
-        // Apply text direction based on language
-//        applyTextDirection(locale);
     }
 
-    public void calculateTotal(ActionEvent actionEvent) {
+    public void calculateTotal() {
         Double total = calculator.getTotal(currentLocale.toString());
 
         lblResultNum.setText(Double.toString(total));
         System.out.println("Total cost: " + total);
     }
 
-    public void addToTotal(ActionEvent actionEvent) {
+    public void addToTotal() {
         calculator.getCurrentItemPrice(textFieldPrice.getText());
         calculator.getCurrentItemQuantity(textFieldQuantity.getText());
 

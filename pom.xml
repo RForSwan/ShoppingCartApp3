@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <sonar.projectKey>ShoppingCartApp3</sonar.projectKey>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +41,6 @@
             <scope>test</scope>
         </dependency>
         <!-- JavaFX Dependencies -->
-        <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx</artifactId> <version>${javafx.version}</version><type>pom</type> </dependency>
         <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-graphics</artifactId> <version>${javafx.version}</version> </dependency>
         <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-fxml</artifactId> <version>${javafx.version}</version> </dependency>
         <dependency> <groupId>org.openjfx</groupId> <artifactId>javafx-controls</artifactId><version>${javafx.version}</version> </dependency>
@@ -76,9 +76,6 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>21</release>
-                    <compilerArgs>
-                        <!--                        <arg>&#45;&#45;enable-preview</arg>-->
-                    </compilerArgs>
                 </configuration>
             </plugin>
 
